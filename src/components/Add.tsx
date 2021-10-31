@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Container, Fab, Modal, makeStyles, Tooltip, Typography } from '@material-ui/core'
-import Post from './Post';
 
 
 

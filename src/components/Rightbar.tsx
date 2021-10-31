@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, makeStyles } from '@material-ui/core'
-
+import Frens from './Frens';
+import Dashboard from './Dashboard';
 
 const useStyle = makeStyles((theme) => ({
     container: {
@@ -13,9 +14,10 @@ const Rightbar =()=>{
     const classes = useStyle();
     return (
         <Container className={classes.container}>
-            right side
+            <Frens />
+            <Dashboard />
         </Container>
     )
 }
 
-export default Rightbar
+export default Rightbar;

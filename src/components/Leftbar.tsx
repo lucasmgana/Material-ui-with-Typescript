@@ -1,5 +1,7 @@
 import React from 'react'
 import { Container, makeStyles, Typography } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCameraRetro, faDollyFlatbed, faHome, faMusic, faPhotoVideo } from '@fortawesome/free-solid-svg-icons';
 
 const useStyles = makeStyles((theme) => ({
     item: {
@@ -30,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
             border: "1px solid #9e9"
         }
     },
-    icon:{
+    icona:{
         paddingRight: theme.spacing(1),
         [theme.breakpoints.down("sm")]:{
             fontSize: "14px",
@@ -45,32 +47,32 @@ const Leftbar =()=>{
     return (
   <Container className={classes.container}>
       <div className={classes.item}>
-          <Typography className={classes.icon} variant="h5">H</Typography>
-          <Typography className={classes.text} variant="h6">
+          <FontAwesomeIcon className={classes.icona} icon={ faHome } size="1x" />
+          <Typography className={classes.text} variant="body2">
               Home
           </Typography>
       </div>
       <div className={classes.item}>
-          <Typography className={classes.icon} variant="h5">M</Typography>
-          <Typography className={classes.text} variant="h6">
+          <FontAwesomeIcon icon={ faMusic } className={classes.icona} size="1x" />
+          <Typography className={classes.text} variant="body2">
               Music
           </Typography>
       </div>
       <div className={classes.item}>
-          <Typography className={classes.icon} variant="h5">D</Typography>
-          <Typography className={classes.text} variant="h6">
+          <FontAwesomeIcon icon={ faDollyFlatbed } className={classes.icona} size="1x" />
+          <Typography className={classes.text} variant="body2">
               Disco
           </Typography>
       </div>
       <div className={classes.item}>
-          <Typography className={classes.icon} variant="h5">P</Typography>
-          <Typography className={classes.text} variant="h6">
+          <FontAwesomeIcon icon={ faCameraRetro } className={classes.icona} size="1x" />
+          <Typography className={classes.text} variant="body2">
               Photography
           </Typography>
       </div>
       <div className={classes.item}>
-          <Typography className={classes.icon} variant="h5">C</Typography>
-          <Typography className={classes.text} variant="h6">
+          <FontAwesomeIcon icon={ faPhotoVideo } className={classes.icona} size="1x" />
+          <Typography className={classes.text} variant="body2">
               Captures
           </Typography>
       </div>

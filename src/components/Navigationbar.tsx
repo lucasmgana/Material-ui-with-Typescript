@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { InputBase, AppBar, Toolbar, Typography, makeStyles, alpha } from '@material-ui/core';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faSearchDollar, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 
 const useStyle = makeStyles((theme) => ({
@@ -55,11 +56,7 @@ const useStyle = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]:{
             display: (props:{open:boolean})=> (props.open? "none": "flex"),
             cursor: "pointer",
-            borderRadius: "50%",
-            paddingLeft: "8px",
-            paddingRight: "8px",
-            backgroundColor: "white",
-            color: "blue",
+            color: "white",
         }
     },
 
@@ -96,12 +93,13 @@ export default function Navigationbar() {
                 </Typography>
                 <div className={classes.navsearch}>
                     <InputBase placeholder="search..." className={classes.input} />
-                    <Typography className={classes.cancel} variant="h6" onClick={()=>setOpen(false)}>x</Typography>
+                    <FontAwesomeIcon icon={ faTimesCircle } onClick={()=>setOpen(false)} />
+                    {/* <Typography className={classes.cancel} variant="h6">x</Typography> */}
                 </div>
 
                 <div className={classes.tagonavsearch} onClick={()=>setOpen(true)} >
-                    F
-                </div>
+                    <FontAwesomeIcon icon={ faSearchDollar } />
+                </div> 
 
 
                 <div className={classes.navicons}>

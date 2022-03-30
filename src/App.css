@@ -8,13 +8,13 @@
 
 .lowa {
   overflow: hidden;
-  animation: 5ms;
+  animation: 6ms;
 }
 
 .mine:hover {
   background-color: purple;
   transform: scale(1.5);
-  animation: 4ms;
+  animation: 5ms;
   pointer-events: fill;
   cursor: pointer;
   box-shadow: 0ch;
